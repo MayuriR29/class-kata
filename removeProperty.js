@@ -1,12 +1,14 @@
-// function removeProperty(obj, prop) {
-//   if (obj[prop]) {
-//     delete obj[prop];
-//     console.log(obj)
-//     return true
-//   }
-//   return false;
-// }
-// console.log(removeProperty({ name: 'mayuri', age: 10 }, 'name'))
+
+
+const  getSum=(id)=>  id.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+
+function createCheckDigit(membershipId) {
+  let sum=getSum(membershipId)
+  while(parseInt(sum)>9)sum=getSum(sum)
+  
+  console.log(sum)
+  return sum;
+}
 
 function formatDate(userDate) {
   var date = new Date(userDate);
